@@ -1,0 +1,6 @@
+build
+node_modules
+package-lock.json
+.env.local
+data/
+history.txt

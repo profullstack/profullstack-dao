@@ -1,0 +1,17 @@
+[Unit]
+Description=profullstack-dao
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu
+WorkingDirectory=/home/ubuntu/www/profullstack.com/profullstack-dao/
+ExecStart=/home/ubuntu/www/profullstack.com/profullstack-dao/bin/start.sh
+StandardOutput=append:/var/log/profullstack-dao.log
+StandardError=append:/var/log/profullstack-dao.error.log
+
+[Install]
+WantedBy=multi-user.target
